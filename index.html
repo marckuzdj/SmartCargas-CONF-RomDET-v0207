@@ -400,7 +400,7 @@
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 11.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
       </div>
-      <h2 style="color: #8A05BE; margin: 0; font-size: 22px; font-weight: bold;">Conferência de Carga vRomDet0207.2</h2>
+      <h2 style="color: #8A05BE; margin: 0; font-size: 22px; font-weight: bold;">Conferência de Carga vRomDet0207.3</h2>
       <p style="color: #666; margin: 5px 0 0 0; font-size: 14px;">Selecione o estado de operação em doca</p>
     </div>
 
@@ -1438,12 +1438,14 @@ async function atualizarDadosExtras() {
 // ==========================================================================
  // 🩹 INJEÇÃO CIRÚRGICA: O TOKEN É VÁLIDO! LIBERA O LINK DE DETALHES IMEDIATAMENTE
  // ==========================================================================
- const lnkDetalhes = document.getElementById('lnkDetalhesRomaneio');
- if (lnkDetalhes) {
-     lnkDetalhes.style.display = 'inline-block';
-     console.log("🔍 [FRONT-CONF] Token aprovado. Link 'Detalhes...' liberado para o Romaneio: " + selectedId);
- }
  // ==========================================================================
+ // 🩹 INJEÇÃO ULTRA-RÁPIDA (PROTEGIDA ANTI-DELAY)
+ // ==========================================================================
+ const lkDet = document.getElementById('lnkDetalhesRomaneio');
+ if (lkDet) lkDet.style.display = 'inline-block';
+ if (typeof selectedId !== 'undefined' && selectedId) window.ROMANEIO_CONTEXTO_ATIVO = selectedId;
+ // ==========================================================================
+
 
  // ==========================================================================
  // NOVA TRAVA DE SEGURANÇA: VALIDAÇÃO DO VALOR DO TOKEN3 COMPATÍVEL
